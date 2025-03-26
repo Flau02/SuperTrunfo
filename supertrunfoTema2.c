@@ -9,13 +9,14 @@ int main() {
     char estado_2[20], cidade_2[25]; 
     unsigned long int populacao_1, populacao_2; 
     int turisticos_1, turisticos_2;
-    float pib_1, area_1; 
-    float pib_2, area_2;
+    float pib_1, pib_2; 
+    float area_1, area_2;
     float pib_percapta_1, pib_percapta_2;
     float densidade_1, densidade_2;
     float superPoder_1, superPoder_2;
-   
-   
+    int primeiroAtributo, segundoAtributo,terceiroAtributo;
+    int resultado1, resultado2, resultado3;
+
     printf("** JOGO SUPER TRUNFO ** \n\n");
     
     //Imprime as orientações de cadastro das cartas
@@ -119,10 +120,191 @@ int main() {
     printf("Super poder carta 2: %.3f\n\n", superPoder_2);
 
    
-    //Menu para escolhas dos atributos
+    //Menu de escolha do primeiro atributo para inicio do jogo
 
-    printf(" ** ESCOLHER ATRIBUTOS PARA COMEÇAR O JOGO ** \n\n");
+    printf("** CARTAS CADASTRADA, AGORA ESCOLHA 2 ATRIBUTOS PARA INICIAR O JOGO **\n\n");
+    printf("Opções de atributos:\n\n");
+    printf("1 - População\n");
+    printf("2 - Pontos turistícos\n");
+    printf("3 - PIB\n");
+    printf("4 - Área territorial\n");
+    printf("5 - PIB percapta\n");
+    printf("6 - Densidade demográfica\n");
+    printf("7 - Super Poder\n\n");
+
+    printf("Digite o número do primeiro atributo: ");
+    scanf("%d", &primeiroAtributo);
+
+    switch (primeiroAtributo)   // Switch para escolha do primeiro atributo e atribui valor a resultado1
+    {
+    case 1:
+        printf("Você escolheu atributo 'POPULAÇÃO'\n");
+        resultado1 = populacao_1 > populacao_2 ? 1 : 0;
+        printf("POPULAÇÃO %s X POPULAÇÃO %s\n\n", codigo_1, codigo_2);
+        break;
+    case 2:
+        printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+        resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+        break;
+    case 3:
+        printf("Você escolheu atributo 'PIB'\n\n");
+        resultado1 = pib_1 > pib_2 ? 1 : 0;
+        break;
+    case 4:
+        printf("Você escolheu atributo 'ÁREA TERRITORIAL'\n\n");
+        resultado1 = area_1 > area_2 ? 1 : 0;
+        break;    
+    case 5:
+        printf("Você escolheu atributo 'PIB PERCAPTA'\n\n");
+        resultado1 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+        break;
+    case 6:
+        printf("Você escolheu atributo 'DENSIDADE DEMOGRÁFICA'\n\n");
+        resultado1 = densidade_1 < densidade_2 ? 1 : 0;
+        break;
+    case 7:
+        printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+        resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+        break;
     
+    default:
+        printf("OPÇÃO ESCOLHIDA INVÁLIDA!!!\n\n");
+        break;
+    }
+
+    //Menu para escolha do segundo atributo
+
+    printf("Escolha o segundo atributo diferente do primeiro escolhido.\n\n");
+    printf("1 - População\n");
+    printf("2 - Pontos turistícos\n");
+    printf("3 - PIB\n");
+    printf("4 - Área territorial\n");
+    printf("5 - PIB percapta\n");
+    printf("6 - Densidade demográfica\n");
+    printf("7 - Super Poder\n\n");
+
+    printf("Digite o número do segundo atributo: ");
+    scanf("%d", &segundoAtributo);
+
+    if (primeiroAtributo == segundoAtributo) // Bloqueio de escolha de mesmo atributo
+    {
+        printf("Você escolheu o mesmo atributo escolha atributos diferentes.\n\n");
+    }
+    else{
+        switch (segundoAtributo) // Switch para escolha de segundo atributo e atribui valor a resultado2
+    {
+    case 1:
+        printf("Você escolheu atributo 'POPULAÇÃO'\n\n");
+        resultado2 = populacao_1 > populacao_2 ? 1 : 0;
+        break;
+    case 2:
+        printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+        resultado2 = turisticos_1 > turisticos_2 ? 1 : 0;
+        break;
+    case 3:
+        printf("Você escolheu atributo 'PIB'\n\n");
+        resultado2 = pib_1 > pib_2 ? 1 : 0;
+        break;
+    case 4:
+        printf("Você escolheu atributo 'ÁREA TERRITORIAL'\n\n");
+        resultado2 = area_1 > area_2 ? 1 : 0;
+        break;    
+    case 5:
+        printf("Você escolheu atributo 'PIB PERCAPTA'\n\n");
+        resultado2 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+        break;
+    case 6:
+        printf("Você escolheu atributo 'DENSIDADE DEMOGRÁFICA'\n\n");
+        resultado2 = densidade_1 < densidade_2 ? 1 : 0;
+        break;
+    case 7:
+        printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+        resultado2 = turisticos_1 > turisticos_2 ? 1 : 0;
+        break;
+    
+    default:
+        printf("OPÇÃO ESCOLHIDA INVÁLIDA!!!\n\n");
+        break;
+    }
+    }
+
+    // Tratamento do resultado
+
+    if (primeiroAtributo == segundoAtributo) {    
+        // Estrutura vazia somente para bloquear continuação do programa se atributos forem iguais.
+      } else if (resultado1 && resultado2) {      
+        printf("PARABÉNS VOCÊ VENCEU O JOGO!!!\n");
+      
+      } else if (resultado1 != resultado2) {
+        printf("EMPATOU O JOGO!!!\n\n");
+        printf("Escolha o terceiro atributo diferente dos anteriores para desempate.\n\n");
+        printf("1 - População\n");
+        printf("2 - Pontos turistícos\n");
+        printf("3 - PIB\n");
+        printf("4 - Área territorial\n");
+        printf("5 - PIB percapta\n");
+        printf("6 - Densidade demográfica\n");
+        printf("7 - Super Poder\n\n");
+
+        printf("Digite o número do terceiro atributo: ");
+        scanf("%d", &terceiroAtributo);
+
+        if (terceiroAtributo == primeiroAtributo)
+        {
+            printf("Você escolheu o mesmo atributo escolha atributos diferentes.\n\n");
+        }else if (terceiroAtributo == segundoAtributo)
+        {
+            printf("Você escolheu o mesmo atributo escolha atributos diferentes.\n\n");
+        }else
+        {
+            switch (terceiroAtributo)  // Switch para escolha de terceiro atributo e atribui valor a resultado3
+            {
+            case 1:
+                printf("Você escolheu atributo 'POPULAÇÃO'\n\n");
+                resultado3 = populacao_1 > populacao_2 ? 1 : 0;
+                break;
+            case 2:
+                printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+                resultado3 = turisticos_1 > turisticos_2 ? 1 : 0;
+                break;
+            case 3:
+                printf("Você escolheu atributo 'PIB'\n\n");
+                resultado3 = pib_1 > pib_2 ? 1 : 0;
+                break;
+            case 4:
+                printf("Você escolheu atributo 'ÁREA TERRITORIAL'\n\n");
+                resultado3 = area_1 > area_2 ? 1 : 0;
+                break;    
+            case 5:
+                printf("Você escolheu atributo 'PIB PERCAPTA'\n\n");
+                resultado3 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+                break;
+            case 6:
+                printf("Você escolheu atributo 'DENSIDADE DEMOGRÁFICA'\n\n");
+                resultado3 = densidade_1 < densidade_2 ? 1 : 0;
+                break;
+            case 7:
+                printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+                resultado3 = turisticos_1 > turisticos_2 ? 1 : 0;
+                break;
+            
+            default:
+                printf("OPÇÃO ESCOLHIDA INVÁLIDA!!!\n\n");
+                break;
+            }
+            
+            if (resultado3 == 1)
+                {
+                 printf("PARABÉNS VOCÊ VENCEU O JOGO!!!\n\n");  
+                }else{
+                    printf("VOCÊ PERDEU O JOGO!!!\n");
+                     }  
+        }
+        
+      } else {
+        printf("VOCÊ PERDEU O JOGO!!!\n");
+      }
+
 
 
 
