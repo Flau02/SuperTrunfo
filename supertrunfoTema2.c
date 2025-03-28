@@ -102,7 +102,7 @@ int main() {
     pib_percapta_2 = pib_2 / (float) populacao_2;
     densidade_2 = (float) populacao_2 / area_2;
 
-     //Calcular super poder carat 2
+     //Calcular super poder carta 2
 
      superPoder_2 = ((float) populacao_2 + area_2 + pib_2 + (float) turisticos_2 + pib_percapta_2) + (1 / densidade_2);
 
@@ -140,31 +140,37 @@ int main() {
     case 1:
         printf("Você escolheu atributo 'POPULAÇÃO'\n");
         resultado1 = populacao_1 > populacao_2 ? 1 : 0;
-        printf("POPULAÇÃO %s X POPULAÇÃO %s\n\n", codigo_1, codigo_2);
+        printf("POPULAÇÃO %s: %d X POPULAÇÃO %s: %d\n\n", codigo_1,populacao_1, codigo_2, populacao_2);
         break;
     case 2:
         printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
         resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+        printf("PONTOS TURÍSTICOS %s: %d X PONTOS TURÍSTICOS %s: %d\n\n", codigo_1,turisticos_1, codigo_2, turisticos_2);
         break;
     case 3:
         printf("Você escolheu atributo 'PIB'\n\n");
         resultado1 = pib_1 > pib_2 ? 1 : 0;
+        printf("PIB %s: %.3f X PIB %s: %.3f\n\n", codigo_1, pib_1, codigo_2, pib_2);
         break;
     case 4:
         printf("Você escolheu atributo 'ÁREA TERRITORIAL'\n\n");
         resultado1 = area_1 > area_2 ? 1 : 0;
+        printf("ÁREA TERRITORIAL %s: %.3f X ÁREA TERRITORIAL %s: %.3f\n\n", codigo_1, area_1, codigo_2, area_2);
         break;    
     case 5:
         printf("Você escolheu atributo 'PIB PERCAPTA'\n\n");
         resultado1 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+        printf("PIB PERCAPTA %s: %.3f X PIB PERCAPTA %s: %.3f\n\n", codigo_1, pib_percapta_1, codigo_2, pib_percapta_2);
         break;
     case 6:
         printf("Você escolheu atributo 'DENSIDADE DEMOGRÁFICA'\n\n");
         resultado1 = densidade_1 < densidade_2 ? 1 : 0;
+        printf("DENSIDADE DEMOGRÁFICA %s: %.3f X DENSIDADE DEMOGRÁFICA %s: %.3f\n\n", codigo_1, densidade_1, codigo_2, densidade_2);
         break;
     case 7:
-        printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
+        printf("Você escolheu atributo 'SUPER PODER'\n\n");
         resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+        printf("SUPER PODER %s: %.3f X SUPER PODER %s: %.3f\n\n", codigo_1, superPoder_1, codigo_2, superPoder_2);
         break;
     
     default:
@@ -193,33 +199,40 @@ int main() {
     else{
         switch (segundoAtributo) // Switch para escolha de segundo atributo e atribui valor a resultado2
     {
-    case 1:
-        printf("Você escolheu atributo 'POPULAÇÃO'\n\n");
-        resultado2 = populacao_1 > populacao_2 ? 1 : 0;
+        case 1:
+        printf("Você escolheu atributo 'POPULAÇÃO'\n");
+        resultado1 = populacao_1 > populacao_2 ? 1 : 0;
+        printf("POPULAÇÃO %s: %d X POPULAÇÃO %s: %d\n\n", codigo_1,populacao_1, codigo_2, populacao_2);
         break;
     case 2:
         printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
-        resultado2 = turisticos_1 > turisticos_2 ? 1 : 0;
+        resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+        printf("PONTOS TURÍSTICOS %s: %d X PONTOS TURÍSTICOS %s: %d\n\n", codigo_1,turisticos_1, codigo_2, turisticos_2);
         break;
     case 3:
         printf("Você escolheu atributo 'PIB'\n\n");
-        resultado2 = pib_1 > pib_2 ? 1 : 0;
+        resultado1 = pib_1 > pib_2 ? 1 : 0;
+        printf("PIB %s: %.3f X PIB %s: %.3f\n\n", codigo_1, pib_1, codigo_2, pib_2);
         break;
     case 4:
         printf("Você escolheu atributo 'ÁREA TERRITORIAL'\n\n");
-        resultado2 = area_1 > area_2 ? 1 : 0;
+        resultado1 = area_1 > area_2 ? 1 : 0;
+        printf("ÁREA TERRITORIAL %s: %.3f X ÁREA TERRITORIAL %s: %.3f\n\n", codigo_1, area_1, codigo_2, area_2);
         break;    
     case 5:
         printf("Você escolheu atributo 'PIB PERCAPTA'\n\n");
-        resultado2 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+        resultado1 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+        printf("PIB PERCAPTA %s: %.3f X PIB PERCAPTA %s: %.3f\n\n", codigo_1, pib_percapta_1, codigo_2, pib_percapta_2);
         break;
     case 6:
         printf("Você escolheu atributo 'DENSIDADE DEMOGRÁFICA'\n\n");
-        resultado2 = densidade_1 < densidade_2 ? 1 : 0;
+        resultado1 = densidade_1 < densidade_2 ? 1 : 0;
+        printf("DENSIDADE DEMOGRÁFICA %s: %.3f X DENSIDADE DEMOGRÁFICA %s: %.3f\n\n", codigo_1, densidade_1, codigo_2, densidade_2);
         break;
     case 7:
-        printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
-        resultado2 = turisticos_1 > turisticos_2 ? 1 : 0;
+        printf("Você escolheu atributo 'SUPER PODER'\n\n");
+        resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+        printf("SUPER PODER %s: %.3f X SUPER PODER %s: %.3f\n\n", codigo_1, superPoder_1, codigo_2,superPoder_2, turisticos_2);
         break;
     
     default:
@@ -257,35 +270,42 @@ int main() {
             printf("Você escolheu o mesmo atributo escolha atributos diferentes.\n\n");
         }else
         {
-            switch (terceiroAtributo)  // Switch para escolha de terceiro atributo e atribui valor a resultado3
+            switch (terceiroAtributo)  // Switch para escolha de terceiro atributo para desempate e atribui valor a resultado3
             {
-            case 1:
-                printf("Você escolheu atributo 'POPULAÇÃO'\n\n");
-                resultado3 = populacao_1 > populacao_2 ? 1 : 0;
+                case 1:
+                printf("Você escolheu atributo 'POPULAÇÃO'\n");
+                resultado1 = populacao_1 > populacao_2 ? 1 : 0;
+                printf("POPULAÇÃO %s: %d X POPULAÇÃO %s: %d\n\n", codigo_1,populacao_1, codigo_2, populacao_2);
                 break;
             case 2:
                 printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
-                resultado3 = turisticos_1 > turisticos_2 ? 1 : 0;
+                resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+                printf("PONTOS TURÍSTICOS %s: %d X PONTOS TURÍSTICOS %s: %d\n\n", codigo_1,turisticos_1, codigo_2, turisticos_2);
                 break;
             case 3:
                 printf("Você escolheu atributo 'PIB'\n\n");
-                resultado3 = pib_1 > pib_2 ? 1 : 0;
+                resultado1 = pib_1 > pib_2 ? 1 : 0;
+                printf("PIB %s: %.3f X PIB %s: %.3f\n\n", codigo_1, pib_1, codigo_2, pib_2);
                 break;
             case 4:
                 printf("Você escolheu atributo 'ÁREA TERRITORIAL'\n\n");
-                resultado3 = area_1 > area_2 ? 1 : 0;
+                resultado1 = area_1 > area_2 ? 1 : 0;
+                printf("ÁREA TERRITORIAL %s: %.3f X ÁREA TERRITORIAL %s: %.3f\n\n", codigo_1, area_1, codigo_2, area_2);
                 break;    
             case 5:
                 printf("Você escolheu atributo 'PIB PERCAPTA'\n\n");
-                resultado3 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+                resultado1 = pib_percapta_1 > pib_percapta_2 ? 1 : 0;
+                printf("PIB PERCAPTA %s: %.3f X PIB PERCAPTA %s: %.3f\n\n", codigo_1, pib_percapta_1, codigo_2, pib_percapta_2);
                 break;
             case 6:
                 printf("Você escolheu atributo 'DENSIDADE DEMOGRÁFICA'\n\n");
-                resultado3 = densidade_1 < densidade_2 ? 1 : 0;
+                resultado1 = densidade_1 < densidade_2 ? 1 : 0;
+                printf("DENSIDADE DEMOGRÁFICA %s: %.3f X DENSIDADE DEMOGRÁFICA %s: %.3f\n\n", codigo_1, densidade_1, codigo_2, densidade_2);
                 break;
             case 7:
-                printf("Você escolheu atributo 'PONTOS TURÍSTICOS'\n\n");
-                resultado3 = turisticos_1 > turisticos_2 ? 1 : 0;
+                printf("Você escolheu atributo 'SUPER PODER'\n\n");
+                resultado1 = turisticos_1 > turisticos_2 ? 1 : 0;
+                printf("SUPER PODER %s: %.3f X SUPER PODER %s: %.3f\n\n", codigo_1, superPoder_1, codigo_2, superPoder_2);
                 break;
             
             default:
@@ -304,13 +324,6 @@ int main() {
       } else {
         printf("VOCÊ PERDEU O JOGO!!!\n");
       }
-
-
-
-
-
-
-
 
     return 0;
 }
