@@ -7,6 +7,8 @@ DESCRIÇÃO
 No jogo Super Trunfo - Estados, os jogadores comparam as propriedades das cartas para determinar a mais forte. O tema deste Super Trunfo é "Estados" onde você comparará as propriedades das cidades.
 Os jogadores irão comparar 2 atributos das cartas, onde quem vencer nas duas comparações será o vencedor da rodada, se houver empate os jogadores escolheram o terceiro atributo para desempate.
 
+Trabalho desenvolvido no nível Mestre.
+
 INSTRUÇÃO DE INSTALAÇÃO
 
 Instalar compilador
